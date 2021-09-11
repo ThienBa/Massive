@@ -1,0 +1,30 @@
+.clients {
+    .clients__content {
+        .clients__item {
+            margin: $mg-1 - 10;
+        }
+        .owl-theme {
+            .owl-dots {
+                .owl-dot {
+                    span {
+                        width: 12px;
+                        height: 12px;
+                        margin: $mg-2 $mg-2 + 2;
+                        background: $color-white-9;
+                        opacity: .5;
+                    }
+                    &.active {
+                        span {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .clients__carousel {
+            .owl-stage {
+                transition: all 0.9s ease 0s!important;
+            }
+        }
+    }
+}

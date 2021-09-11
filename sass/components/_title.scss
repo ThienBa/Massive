@@ -1,0 +1,26 @@
+.title__top {
+    margin-bottom: $mg-3;
+    text-align: center;
+    h1 {
+        @include styleText($fs-4, $color-black-2, $fw-0);
+        letter-spacing: $letter-spacing-1;
+    }
+    p {
+        width: 65%;
+        margin: 0 auto;
+        color: $color-gray-0;
+        line-height: $line-height-2 - 5;
+    }
+}
+
+@include responsive("medium") {
+    .title__top {
+        margin-bottom: $mg-4;
+        h1 {
+            font-size: $fs-3;
+        }
+        p {
+            width: 80%;
+        }
+    }
+}

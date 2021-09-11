@@ -1,0 +1,109 @@
+.banner {
+    background-image: url("../images/background-banner.jpg");
+    @extend %backgroundImg;
+    .banner__wrapper {
+        padding: 0;
+        .bannerCarousel {
+            .banner__thumb {
+                margin-top: $mg-4;
+            }
+            .banner__content {
+                padding: $pd-5 10px 0 $pd-4;
+                h4 {
+                    @include styleText($fs-3,
+                    $color-yello-0,
+                    $fw-0);
+                    letter-spacing: $letter-spacing-1;
+                    line-height: $line-height-0;
+                }
+                p {
+                    @include styleText($fs-0+1,
+                    $color-white-0,
+                    $fw-0);
+                    font-style: italic;
+                    line-height: $line-height-2;
+                    margin-bottom: $mg-1;
+                }
+                button {
+                    &.button--gray {
+                        @include styleText($fs-1 - 1,
+                        $color-white-0,
+                        $fw-0);
+                        letter-spacing: $letter-spacing-1 - 1;
+                        padding: $pd-0 - 2 $pd-2;
+                    }
+                }
+            }
+            .owl-dots {
+                position: absolute;
+                bottom: 5%;
+                right: 0;
+                .owl-dot {
+                    span {
+                        width: 12px;
+                        height: 12px;
+                        margin: $mg-2 $mg-2 + 2;
+                    }
+                }
+            }
+            .owl-stage {
+                transition: all 0.9s ease 0s !important;
+            }
+        }
+    }
+}
+
+@include responsive("extra-large") {
+    .banner {
+        .banner__wrapper {
+            .bannerCarousel {
+                .banner__content {
+                    padding: $pd-4 $pd-0 - 2 0 $pd-4;
+                }
+            }
+        }
+    }
+}
+
+@include responsive("large") {
+    .banner {
+        .banner__wrapper {
+            .bannerCarousel {
+                .banner__thumb {
+                    display: none;
+                }
+                .banner__content {
+                    padding: $pd-2 $pd-3 0 $pd-3;
+                    h4 {
+                        margin: 0;
+                    }
+                    p {
+                        margin-bottom: 10px;
+                    }
+                    button {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium") {
+    .banner {
+        .banner__wrapper {
+            .bannerCarousel {
+                .banner__cont ent {
+                    p {
+                        line-height: $line-height-0;
+                    }
+                }
+                .banner__row {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

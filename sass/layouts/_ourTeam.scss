@@ -1,0 +1,118 @@
+.ourTeam {
+    .ourTeam__wrapper {
+        background-color: $color-gray-4;
+        .ourTeam__content {
+            .ourTeam__item {
+                padding: 0 30px;
+                .ourTeam__img {
+                    position: relative;
+                    &:hover {
+                        .ourTeam__overlay {
+                            opacity: 1;
+                            .ourTeam__desc {
+                                top: 13%;
+                                opacity: 1;
+                            }
+                            .ourTeam__social {
+                                bottom: 5%;
+                                opacity: 1;
+                                a {
+                                    i {
+                                        transition: all .3s;
+                                    }
+                                    &:hover {
+                                        i {
+                                            color: $color-yello-0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    img {
+                        width: 100%;
+                    }
+                    .ourTeam__intro {
+                        position: absolute;
+                        right: 0;
+                        bottom: 30px;
+                        width: 70%;
+                        padding: $pd-0 - 2 $pd-1 - 10;
+                        text-align: right;
+                        background: $color-black-6;
+                        h5,
+                        p {
+                            margin-bottom: 0;
+                            letter-spacing: $letter-spacing-1;
+                            text-transform: uppercase;
+                            color: $color-white-0;
+                            font-size: $fs-0 - 1;
+                        }
+                        p {
+                            color: $color-gray-3;
+                            font-size: $fs-1 - 1;
+                        }
+                    }
+                    .ourTeam__overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: 20px solid rgba(0, 0, 0, .1);
+                        background-color: $color-white-3;
+                        text-align: center;
+                        overflow: hidden;
+                        transition: all .3s;
+                        opacity: 0;
+                        .ourTeam__desc {
+                            position: absolute;
+                            top: -30%;
+                            padding: 0 $pd-2;
+                            transition: all .3s .2s;
+                            opacity: 0;
+                            h4 {
+                                margin-bottom: $mg-1 - 5;
+                                letter-spacing: $letter-spacing-2 - 2;
+                                text-transform: uppercase;
+                                font-size: $fs-0 - 1;
+                            }
+                            p {
+                                margin-bottom: 0;
+                                @include styleText($fs-1 + 1, $color-gray-0, $fw-0);
+                                line-height: $line-height-2;
+                            }
+                        }
+                        .ourTeam__social {
+                            position: absolute;
+                            width: 100%;
+                            bottom: -10%;
+                            text-align: center;
+                            font-size: $fs-2 - 1;
+                            transition: all .3s .2s;
+                            opacity: 0;
+                            a {
+                                margin: 0 $mg-2 + 5;
+                                @include styleText( $fs-0 + 1, $color-black-2, $fw-0);
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium") {
+    .ourTeam {
+        .ourTeam__wrapper {
+            padding: $pd-6 0;
+            .title__top {
+                p {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

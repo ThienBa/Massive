@@ -1,0 +1,71 @@
+.number {
+    background-image: url("../images/number.jpg");
+    @extend %backgroundImg;
+    .number__content {
+        .number__item {
+            display: flex;
+            height: 80px;
+            .number__icon {
+                margin-top: $mg-5;
+                i {
+                    @include styleText($fs-2,
+                    $color-white-0,
+                    $fw-0);
+                }
+            }
+            .number__info {
+                padding-left: 70px;
+                h1 {
+                    @include styleText($fs-2,
+                    $color-white-0,
+                    $fw-0);
+                    margin-bottom: 0;
+                    letter-spacing: $letter-spacing-1;
+                }
+                p {
+                    color: #fff;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 25%;
+                    width: 1px;
+                    height: 80px;
+                    background-color: $color-gray-8;
+                    transform: rotate(30deg);
+                }
+            }
+        }
+    }
+}
+
+@include responsive("large") {
+    .number {
+        .number__content {
+            .number__item {
+                .number__info {
+                    &:before {
+                        left: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium") {
+    .number {
+        .number__content {
+            .number__item {
+                .number__info {
+                    &:before {
+                        left: 95px;
+                    }
+                }
+            }
+        }
+    }
+}

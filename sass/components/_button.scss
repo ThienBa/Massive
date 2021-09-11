@@ -1,0 +1,28 @@
+.button--gray {
+    @include styleButton($color-white-0, $color-gray-7, $color-black-3, $fs-1 + 1, $fw-0, $pd-2 - 5, $pd-1);
+    border-radius: 4px;
+    transition: all .3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+        @include hoverButton($color-white-0, $color-yello-0, $color-black-3);
+    }
+}
+
+.button--white {
+    @include styleButton($color-black-3, transparent, $color-black-3, $fs-1 + 1, $fw-0, $pd-2 - 5, $pd-1);
+    border-radius: 4px;
+    transition: all .3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+        @include hoverButton($color-white-0, $color-black-3, $color-black-3);
+    }
+}
+
+@include responsive("medium") {
+    .button--gray,
+    .button--white {
+        font-size: $fs-1 - 1;
+    }
+}

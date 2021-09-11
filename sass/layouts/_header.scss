@@ -1,0 +1,151 @@
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    transition: all .3s;
+    .container-fluid {
+        padding: 0 $pd-1;
+        transition: all .3s;
+        .navbarMain {
+            max-height: 400px;
+            padding: 0;
+            letter-spacing: $letter-spacing-0;
+            position: relative;
+            justify-content: space-between;
+            .logo {
+                .navbar-brand {
+                    margin-right: $mg-1;
+                    padding: 0;
+                    img {
+                        width: auto;
+                        height: 96px;
+                        padding: $mg-0 0;
+                        transition: all .3s;
+                    }
+                }
+            }
+            #navbarMassive {
+                justify-content: flex-end;
+                .navbar-nav {
+                    .nav-item {
+                        margin-left: $mg-0;
+                        .nav-link {
+                            @include styleText($fs-1, $color-black-2, $fw-0);
+                            display: inline-block;
+                            padding: 0 $pd-0;
+                            text-decoration: none;
+                            line-height: $line-height-1;
+                        }
+                        &.active {
+                            .nav-link {
+                                color: $color-yello-0;
+                            }
+                        }
+                        &:hover {
+                            .nav-link {
+                                color: $color-yello-0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.headerScroll {
+    position: fixed;
+    .container-fluid {
+        box-shadow: 0 1px 2px $color-black-4;
+        height: 60px;
+        background-color: $color-white-0;
+        .navbarMain {
+            .logo {
+                .navbar-brand {
+                    img {
+                        height: 60px;
+                    }
+                }
+            }
+            #navbarMassive {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            line-height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:899px) {
+    header {
+        .container-fluid {
+            .navbarMain {
+                #navbarMassive {
+                    .nav-item {
+                        .nav-link {
+                            padding: 0 $pd-0 - 7 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium") {
+    header {
+        .container-fluid {
+            box-shadow: 0 1px 2px $color-black-4;
+            background-color: $color-white-0;
+            .navbarMain {
+                height: 60px;
+                .navbar-toggler {
+                    i {
+                        color: $color-gray-12;
+                    }
+                }
+                .logo {
+                    .navbar-brand {
+                        img {
+                            height: 60px;
+                        }
+                    }
+                }
+                #navbarMassive {
+                    background-color: $color-white-0;
+                    .navbar-nav {
+                        .nav-item {
+                            margin: 0 $mg-1 - 10;
+                            .nav-link {
+                                line-height: 20px;
+                                padding: 0 $pd-0 - 7;
+                                border-top: solid 1px #f0f0f0;
+                                display: block;
+                                padding: 12px 20px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .headerScroll {
+        .container-fluid {
+            .navbarMain {
+                #navbarMassive {
+                    .navbar-nav {
+                        .nav-item {
+                            .nav-link {
+                                line-height: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

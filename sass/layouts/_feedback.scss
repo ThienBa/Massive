@@ -1,0 +1,51 @@
+.feedback {
+    background-image: url("../images/background-feedback.jpg");
+    @extend %backgroundImg;
+    .feedback__carousel {
+        .feedback__item {
+            text-align: center;
+            .feedback__thumb {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                margin-bottom: $mg-4;
+                img {
+                    border-radius: 50%
+                }
+            }
+            .feedback__desc {
+                p {
+                    @include styleText($fs-0+1,
+                    $color-white-0,
+                    $fw-0);
+                    font-style: italic;
+                    line-height: $line-height-2;
+                    width: 60%;
+                    margin: 0 auto;
+                }
+                div {
+                    color: #fff;
+                    margin-top: $mg-5;
+                    letter-spacing: $letter-spacing-1;
+                    text-transform: uppercase;
+                    font-size: $fs-1 + 1;
+                    span {
+                        display: block;
+                        font-size: $fs-1 - 1;
+                    }
+                }
+            }
+        }
+        .owl-dots {
+            margin-top: $mg-1 - 10 !important;
+            span {
+                width: 12px;
+                height: 12px;
+                margin: $mg-2 $mg-2 + 2;
+            }
+        }
+        .owl-stage {
+            transition: all 0.9s ease 0s !important;
+        }
+    }
+}

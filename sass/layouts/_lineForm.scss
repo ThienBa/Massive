@@ -1,0 +1,46 @@
+.lineForm {
+    .lineForm__form {
+        display: flex;
+        width: 85%;
+        margin: 0 auto;
+        .lineForm__item {
+            .form-control {
+                border: 1px solid $color-white-7;
+                height: 40px;
+                border-radius: 0;
+                box-shadow: none;
+                font-size: $fs-1 + 1;
+                color: #555;
+                background-color: $color-white-0;
+                &:focus {
+                    border-color: $color-black-3;
+                }
+            }
+            textarea {
+                &.form-control {
+                    height: 95px;
+                }
+            }
+            button {
+                width: 100%;
+                padding: $pd-0 - 2 $pd-2;
+                @include styleText($fs-1 - 1, $color-white-0, $fw-0);
+                background: $color-black-3;
+                border-radius: 0;
+                &:hover {
+                    background-color: $color-yello-0;
+                    border-color: $color-yello-0;
+                }
+            }
+        }
+    }
+}
+
+@include responsive("large") {
+    .lineForm {
+        .lineForm__form {
+            width: 100%;
+            display: block;
+        }
+    }
+}

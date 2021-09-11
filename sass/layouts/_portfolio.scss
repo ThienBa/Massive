@@ -1,0 +1,116 @@
+.portfolio {
+    padding-bottom: 0;
+    .portfolio__content {
+        .nav-tabs {
+            justify-content: center;
+            border: none;
+            .nav-item {
+                .nav-link {
+                    margin: 0 15px;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    color: #a9a8a8;
+                    font-size: 14px;
+                    padding: 0;
+                    &.active {
+                        color: $color-gray-5;
+                        border-color: $color-white-0;
+                    }
+                    &:hover {
+                        border-color: $color-white-0;
+                        color: $color-gray-5;
+                    }
+                }
+            }
+        }
+        #myTabContent {
+            margin-top: $mg-4;
+            padding: 0 $pd-0;
+            .portfolio__col {
+                padding: 0;
+                .portfolio__item {
+                    padding: $pd-0 - 2;
+                    position: relative;
+                    .portfolio__thumb {
+                        position: relative;
+                        &:hover {
+                            .portfolio__overlay {
+                                opacity: 1;
+                                .portfolio__hover {
+                                    .portfolio__btn {
+                                        transform: translateY(0);
+                                    }
+                                    .portfolio__desc {
+                                        transform: translateY(0);
+                                    }
+                                }
+                            }
+                        }
+                        img {
+                            width: 100%;
+                        }
+                        .portfolio__overlay {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            border: 20px solid $color-black-4;
+                            background-color: $color-white-3;
+                            transition: all .3s;
+                            text-align: center;
+                            opacity: 0;
+                            .portfolio__hover {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                width: 100%;
+                                transform: translate(-50%, -50%);
+                                .portfolio__btn {
+                                    transform: translateY(-40px);
+                                    transition: all .3s;
+                                    a {
+                                        @include styleText($fs-2 - 1, $color-black-3, $fw-0);
+                                    }
+                                }
+                                .portfolio__desc {
+                                    transform: translateY(30px);
+                                    margin-top: $mg-1;
+                                    transition: all .3s;
+                                    h4 {
+                                        margin-bottom: $mg-2;
+                                        letter-spacing: $letter-spacing-2 - 1;
+                                        text-transform: uppercase;
+                                        font-size: $fs-1 + 1;
+                                        a {
+                                            color: $color-black-3;
+                                            text-decoration: none;
+                                            transition: all .3s;
+                                            &:hover {
+                                                color: $color-yello-0;
+                                            }
+                                        }
+                                    }
+                                    p {
+                                        margin-bottom: 0;
+                                        letter-spacing: $letter-spacing-1 + 1;
+                                        text-transform: uppercase;
+                                        font-size: $fs-1 - 1;
+                                        a {
+                                            color: $color-gray-6;
+                                            text-decoration: none;
+                                            transition: all .3s;
+                                            &:hover {
+                                                color: $color-yello-0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

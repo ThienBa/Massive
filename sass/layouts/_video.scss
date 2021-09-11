@@ -1,0 +1,35 @@
+.video {
+    .container {
+        .video__content {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@include responsive("large") {
+    .video {
+        .container {
+            .video__content {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@include responsive("medium") {
+    .video {
+        .container {
+            .video__content {
+                width: 95%;
+                margin: 0 auto;
+                p {
+                    iframe {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

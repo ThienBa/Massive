@@ -1,0 +1,89 @@
+.start {
+    background: $color-black-3;
+    padding: $pd-3 0 $pd-3 - 10;
+    .start__content {
+        .start__row {
+            align-items: center;
+            .start__left {
+                padding-left: $pd-1;
+                p {
+                    color: $color-white-0;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+                h3 {
+                    text-transform: uppercase;
+                    @include styleText($fs-4, $color-white-0, $fw-0);
+                    margin-bottom: 0;
+                    letter-spacing: 1px;
+                    span {
+                        color: $color-yello-0;
+                    }
+                }
+            }
+            .start__col {
+                padding: 0;
+            }
+            .start__button {
+                text-align: right;
+                padding: 0;
+                button {
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+@include responsive("extra-large") {
+    .start {
+        .start__content {
+            .start__row {
+                .start__left {
+                    width: 70%;
+                }
+                .start__button {
+                    position: absolute;
+                    top: 50%;
+                    right: -5%;
+                    transform: translateY(-55%);
+                    margin-right: $mg-4;
+                }
+            }
+        }
+    }
+}
+
+@include responsive("large") {
+    .start {
+        .start__content {
+            .start__row {
+                .start__button {
+                    transform: translateY(-150%);
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium") {
+    .start {
+        .start__content {
+            .start__row {
+                height: 130px;
+                .start__left {
+                    width: 100%;
+                    h3 {
+                        font-size: $fs-3;
+                    }
+                }
+                .start__button {
+                    position: relative;
+                    text-align: left;
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+}

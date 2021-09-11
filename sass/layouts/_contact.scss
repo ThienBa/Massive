@@ -1,0 +1,30 @@
+.contactSection {
+    padding: 150px 0;
+    background-image: url("../images/contactBg.jpg");
+    @extend %backgroundImg;
+    .container {
+        .contact__item {
+            text-align: center;
+            .contact__icon {
+                padding-bottom: $pd-1;
+                i {
+                    @include styleText($fs-2,
+                    $color-white-0,
+                    300);
+                }
+            }
+            .contact__title {
+                h4 {
+                    @include styleText($fs-3,
+                    $color-white-0,
+                    $fw-0);
+                    margin-bottom: $mg-1 - 10;
+                    letter-spacing: $letter-spacing-3;
+                }
+            }
+            .contact__desc {
+                color: $color-white-0;
+            }
+        }
+    }
+}

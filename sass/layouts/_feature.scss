@@ -1,0 +1,38 @@
+.feature {
+    .feature__content {
+        .feature__col {
+            padding: 0 $pd-1 - 5;
+            img {
+                width: 100%;
+            }
+        }
+        .feature__content {
+            .feature__item {
+                margin-bottom: $mg-4 - 10;
+                h1 {
+                    @include styleText($fs-2, $color-white-6, $fw-0);
+                    margin-bottom: 0;
+                }
+                h4 {
+                    @include styleText($fs-3, $color-black-3, $fw-0);
+                    text-transform: uppercase;
+                    margin-bottom: $mg-1;
+                    letter-spacing: $letter-spacing-3;
+                }
+                p {
+                    color: $color-gray-0;
+                }
+            }
+            .feature__button {
+                .button--gray {
+                    background-color: $color-black-3;
+                    margin-right: $mg-1 - 10;
+                    &:hover {
+                        background-color: $color-yello-0;
+                        border-color: $color-yello-0;
+                    }
+                }
+            }
+        }
+    }
+}

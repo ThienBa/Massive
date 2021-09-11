@@ -1,0 +1,107 @@
+.aboutSection {
+    .about__container {
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            .about__content {
+                .row {
+                    .about__block {
+                        padding: 0 $pd-1;
+                        .about__item {
+                            padding: $pd-1;
+                            position: relative;
+                            border: 1px solid $color-white-1;
+                            border-radius: $bd-radius;
+                            &:hover {
+                                .about__icon {
+                                    background: $color-yello-0;
+                                }
+                            }
+                            .about__icon {
+                                position: absolute;
+                                top: -30px;
+                                left: 30px;
+                                width: 60px;
+                                height: 60px;
+                                line-height: 60px;
+                                text-align: center;
+                                border-radius: 4px;
+                                background: $color-black-3;
+                                box-shadow: 0 0 0 10px $color-white-0;
+                                transition: all .3s ease;
+                                i {
+                                    @include styleText($fs-5, $color-white-0, $fw-4);
+                                    line-height: 60px;
+                                }
+                            }
+                        }
+                        .about__title {
+                            margin-top: $mg-1;
+                            h4 {
+                                margin-bottom: $mg-1 - 10;
+                                letter-spacing: $letter-spacing-1 - 1;
+                                font-size: $fs-3;
+                            }
+                        }
+                        .about__desc {
+                            p {
+                                color: $color-gray-0;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("extra-large") {
+    .aboutSection {
+        .about__container {
+            .container {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .about__content {
+                .about__block {
+                    .about__item {
+                        margin-bottom: $mg-4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("large") {
+    .aboutSection {
+        padding: $pd-3 - 10 0;
+        .about__container {
+            .container {
+                width: 95%;
+                margin: 0 auto;
+            }
+            .title__top {
+                margin-bottom: $mg-4;
+                h1 {
+                    font-size: $fs-3;
+                }
+                p {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@include responsive("small") {
+    .aboutSection {
+        .about__container {
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
